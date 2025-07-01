@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\main_game.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main_game.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\env\\pyvenv.cfg||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:env\\pyvenv.cfg||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\class_Enemies.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:class_Enemies.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\player_class.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:player_class.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\platform_class.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:platform_class.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "pyvenv.cfg",
+              "DocumentMoniker": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\env\\pyvenv.cfg",
+              "RelativeDocumentMoniker": "env\\pyvenv.cfg",
+              "ToolTip": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\env\\pyvenv.cfg",
+              "RelativeToolTip": "env\\pyvenv.cfg",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-14T22:35:43.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "class_Enemies.py",
+              "DocumentMoniker": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\class_Enemies.py",
+              "RelativeDocumentMoniker": "class_Enemies.py",
+              "ToolTip": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\class_Enemies.py",
+              "RelativeToolTip": "class_Enemies.py",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-14T22:14:19.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "player_class.py",
+              "DocumentMoniker": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\player_class.py",
+              "RelativeDocumentMoniker": "player_class.py",
+              "ToolTip": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\player_class.py",
+              "RelativeToolTip": "player_class.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-14T22:14:17.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main_game.py",
+              "DocumentMoniker": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\main_game.py",
+              "RelativeDocumentMoniker": "main_game.py",
+              "ToolTip": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\main_game.py",
+              "RelativeToolTip": "main_game.py",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACYAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-14T22:14:15.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "platform_class.py",
+              "DocumentMoniker": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\platform_class.py",
+              "RelativeDocumentMoniker": "platform_class.py",
+              "ToolTip": "C:\\Users\\Lincoln\\Documents\\python projects\\CodeWiz\\platformer_game\\platform_class.py",
+              "RelativeToolTip": "platform_class.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-14T22:13:44.996Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

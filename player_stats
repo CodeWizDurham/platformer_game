@@ -1,0 +1,14 @@
+player has ten health and gets 3 more every boss. the player can change weapons upon finding them in different rooms.
+the different weapons are wood sword(you start with this), iron sword, diomand sword, rock spear, iron spear, diomand spear, and bow.
+spears sacrafice strength for a long reach
+rock spear: 2 damage
+iron spear: 3 damage
+diomand spear: 5 damage
+swords have a short reach
+wood sword: 3 damage
+iron sword: 4 damage
+diomand sword: 6 damage
+the bow shoots in a straight line in the direction that the player is facing
+bow: 3 damage
+the player can only have one weapon at a time
+or keys[pygame.K_SPACE]or keys[pygame.K_w]

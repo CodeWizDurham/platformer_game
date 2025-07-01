@@ -1,0 +1,6 @@
+ - Make hopper #
+ - Make runner #
+ - Program enemies to chase #
+ - Collectables? 
+
+ - Once done: create format + levels and wrap up

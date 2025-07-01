@@ -1,0 +1,13 @@
+blue: normal
+green: +1
+red: +3
+grey: +5
+player: 10 health(can get more)
+hopper: jumps toward the player and does 3 damage opon landing on the player, damage can change depending on color, has 5 health, moves at a low speed, it can be going back and forth on a platform
+runner: opon seeing the player it will run at a fast speed to hit the player and do 5 damage, it will pass the player and then slowly turn around for a second hit, it has 3 health
+walker: walks at a medium speed towards the player, it will stop moving in front of the player and start attacking doing 2 damage each hit, it's damage can change depending on it's color, it has 7 health, it can be going back and forth on a platform
+archer: can shoot a arrow towards the player doing 2 damage if the arrow hits the player, it cannot move, damage can change depending on color, it has 4 health 
+mine: upon a entity standing on it, it will explode doing 5 damage to everthing around it, it cannot move, it cannot be destroyed unless walked on, it can hurt players and enemys
+saw: upon a entity standing on it, it will do 5 damage to that entity ever 2 seconds, it can move quickly between 2 points, it cannot be destroyed, it can hurt players and enemys
+healer: it cannot do damage, when it is standing near other enemys it will heal them by 1 every 2 seconds, it will follow other enemys at a medium speed, it has 3 health, when attacked it gains the damage as more health unless it is not glowing, it will start glowing if it is healing other enemys
+bosses: bosses have a health bar at the top of the screen, bosses have special abilities, bosses gaurd the end the island, bosses can spawn other enemys
