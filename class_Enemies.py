@@ -70,7 +70,7 @@ class enemy:
                     self.health-=player_attack
             if self.health<=0:
                 pass #death animation
-        #add boss types later
+        #add boss types later PLEASE
 
 
 
