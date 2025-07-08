@@ -14,19 +14,19 @@ def level_1():
     global Level_1
     global background_X
     global platform_builder
-    global runner
+    global walker
     global wall_rect
     screen=pygame.display.set_mode((600,600))
     background_X=-10
     Level_1=pygame.image.load("level_1.png").convert()
     character=player("pass",10,"pass","wood sword","pass","pass","pass","pass","pass","pass",300,450,background_X,screen)
-    #runner=enemy("pass",3,5,3,"runner","none",0,"pass","pass","pass","pass","pass","pass",350,490,screen)
+    walker=enemy("pass",2,2,7,"walker","none",0,pygame.Rect((1400,500,250,10)),"pass","pass","pass","pass","pass","pass",1475,490,screen)
     platform_builder=platform(Level_1)
     obstacle_Rect=[]
     move_obstacle_Rect=[]
     enemy_rect=[]
     wall_rect=[]
-    enemies=[]
+    enemies=[walker]
     moving_platforms=[]
     for enemything in enemies:
         enemy_rect.append(0)
@@ -37,6 +37,7 @@ def level_1():
     platform_builder.create_wall(700,400,200,100,wall_rect,obstacle_Rect)
     platform_builder.create_platform(975,250,obstacle_Rect)
     platform_builder.create_wall(1200,300,100,200,wall_rect,obstacle_Rect)
+    
     print("hello")
 def level_1_loop():
     for event in pygame.event.get(): #quits game
@@ -46,9 +47,9 @@ def level_1_loop():
     screen.blit(Level_1,(background_X,0)) #loads images
     screen.blit(platform_builder.background_surface,(background_X,0))
     background_X=character.movement_Update(obstacle_Rect,wall_rect,move_obstacle_Rect,enemy_rect) #updates character movement
-    #runner.movement_Update(obstacle_Rect,enemy_rect,character.step,character.Rect)
-    #runner.health_Update(character.damage,character.enemy_attacked,enemy_rect,False)
-    #character.health_Update(runner.enemy_Attack())
+    walker.movement_Update(obstacle_Rect,enemy_rect,character.step,character.Rect)
+    walker.health_Update(character.damage,character.enemy_attacked,enemy_rect,False)
+    character.health_Update(walker.enemy_Attack())
     
     global finish_var #checks if finished
     finish_var=character.finish(-2200)

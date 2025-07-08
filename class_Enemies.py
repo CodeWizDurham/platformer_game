@@ -1,6 +1,6 @@
 import pygame
 class enemy:
-    def __init__(self,picture,speed,damage,health,type,armour,index,death_Animation,death_Sound,attack_Sound,movement_Sound,attack_Animation,movement_Animation,spawn_X,spawn_Y,screen):
+    def __init__(self,picture,speed,damage,health,type,armour,index,hitbox,death_Animation,death_Sound,attack_Sound,movement_Sound,attack_Animation,movement_Animation,spawn_X,spawn_Y,screen):
         self.picture=picture
         self.speed=speed
         self.damage=damage
@@ -21,7 +21,7 @@ class enemy:
         self.current_X=spawn_X
         self.current_Y=spawn_Y
         self.Rect=0
-        self.hitbox=0
+        self.hitbox=hitbox
         self.enemy_index=0
         self.spawn_index=index
         self.death=False
@@ -31,7 +31,8 @@ class enemy:
         self.player_Position=0
         self.see=False
         self.startup=False
-        self.screen_Rect=0
+
+
     def health_Update(self,player_attack,enemy_attacked,enemy_rect,glowing):
         #if enemy_attacked!="none":
             #print(enemy_attacked)
@@ -70,7 +71,7 @@ class enemy:
                     self.health-=player_attack
             if self.health<=0:
                 pass #death animation
-        #add boss types later PLEASE
+        #add boss types later
 
 
 
@@ -94,23 +95,24 @@ class enemy:
             self.screen_Rect=self.Rect
             if self.type=="runner":
                 self.chase()
-            self.back_Forth(obstacle_Rect)
+            if self.type!="runner":
+                self.back_Forth(obstacle_Rect)
             self.hitbox_slide(player_step)
     def back_Forth(self,obstacle_Rect):
-        for bounding_Box in obstacle_Rect:
-            if self.Rect.colliderect(bounding_Box)==True:
-                self.fall_speed=0
-                self.hitbox=bounding_Box
-                #print(self.hitbox)
-                self.current_Y=self.hitbox.top-10
-                if self.type!="runner":
-                    self.current_X+=self.speed
-                    if self.hitbox.left>=self.Rect.left:
-                        self.speed=self.speed*-1
-                        self.current_X+=abs(self.speed)+2
-                    elif self.hitbox.right<=self.Rect.right:
-                        self.speed=self.speed*-1
-                        self.current_X-=abs(self.speed)+2
+        
+        if self.Rect.colliderect(self.hitbox)==True:
+            self.fall_speed=0
+            
+            #print(self.hitbox)
+            self.current_Y=self.hitbox.top-10
+            
+            self.current_X+=self.speed
+            if self.hitbox.left>=self.Rect.left:
+                self.speed=self.speed*-1
+                self.current_X+=abs(self.speed)+2
+            elif self.hitbox.right<=self.Rect.right:
+                self.speed=self.speed*-1
+                self.current_X-=abs(self.speed)+2
         if self.type=="hopper":
             if self.fall_timer<=0:
                 self.current_Y-=10
@@ -145,3 +147,4 @@ class enemy:
             return 0
     def hitbox_slide(self,player_step):
         self.current_X-=player_step
+        self.hitbox[0]-=player_step
