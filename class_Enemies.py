@@ -139,9 +139,12 @@ class enemy:
             #print(self.Rect.colliderect(player_Position))
             if self.Rect.colliderect(self.player_Position)==True:
                 self.cooldown+=50
+                
                 return self.damage
             else:
                 return 0
+        
+
         else:
             self.cooldown-=1
             return 0

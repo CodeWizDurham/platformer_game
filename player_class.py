@@ -1,6 +1,6 @@
 import pygame
 class player:
-    def __init__(self,picture,health,armour,weapon,death_Animation,death_Sound,attack_Sound,movement_Sound,attack_Animation,movement_Animation,spawn_X,spawn_Y,background_X,screen):
+    def __init__(self,picture,health,max_health,armour,weapon,death_Animation,death_Sound,attack_Sound,movement_Sound,attack_Animation,movement_Animation,spawn_X,spawn_Y,background_X,screen):
         self.picture=picture
         self.weapon=weapon
         self.health=health
@@ -33,7 +33,8 @@ class player:
         self.collide_Wall_right=False
         self.velocity=0
         self.collided_wall=0
-
+        self.max_health=max_health
+        self.heal_cooldown=200
         
     def movement_Update(self,obstacle_Rect,wall_Rect,move_obstacle_Rect,enemy_Rect):
         self.Rect=pygame.Rect(self.current_X,self.current_Y,20,20)
@@ -178,6 +179,14 @@ class player:
 
     def health_Update(self,enemy_Attack):
         self.health-=enemy_Attack
+        print(self.heal_cooldown)
+        if enemy_Attack>0:
+            self.heal_cooldown=200
+        elif self.heal_cooldown<=0 and self.health<self.max_health:
+            self.health+=1
+            self.heal_cooldown=200
+        else:
+            self.heal_cooldown-=1
         font=pygame.font.SysFont("calibri",40)
         text=font.render(str(self.health),True,(255,0,0))
         self.screen.blit(text,(10,10))

@@ -19,7 +19,7 @@ def level_1():
     screen=pygame.display.set_mode((600,600))
     background_X=-10
     Level_1=pygame.image.load("level_1.png").convert()
-    character=player("pass",10,"pass","wood sword","pass","pass","pass","pass","pass","pass",300,450,background_X,screen)
+    character=player("pass",10,10,"pass","wood sword","pass","pass","pass","pass","pass","pass",300,450,background_X,screen)
     walker=enemy("pass",2,2,7,"walker","none",0,pygame.Rect((1400,500,250,10)),"pass","pass","pass","pass","pass","pass",1475,490,screen)
     platform_builder=platform(Level_1)
     obstacle_Rect=[]
