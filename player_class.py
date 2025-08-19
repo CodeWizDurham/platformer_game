@@ -35,6 +35,8 @@ class player:
         self.collided_wall=0
         self.max_health=max_health
         self.heal_cooldown=200
+        self.regen=False
+        self.regen_cooldown=10
         
     def movement_Update(self,obstacle_Rect,wall_Rect,move_obstacle_Rect,enemy_Rect):
         self.Rect=pygame.Rect(self.current_X,self.current_Y,20,20)
@@ -182,11 +184,16 @@ class player:
         print(self.heal_cooldown)
         if enemy_Attack>0:
             self.heal_cooldown=200
+            self.regen=False
         elif self.heal_cooldown<=0 and self.health<self.max_health:
-            self.health+=1
+            self.regen=True
             self.heal_cooldown=200
         else:
             self.heal_cooldown-=1
+            self.regen_cooldown-=1
+        while self.regen==True and self.regen_cooldown<=0 and self.max_health>self.health:
+            self.regen_cooldown=10
+            self.health+=1
         font=pygame.font.SysFont("calibri",40)
         text=font.render(str(self.health),True,(255,0,0))
         self.screen.blit(text,(10,10))
