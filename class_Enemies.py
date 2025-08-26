@@ -1,6 +1,6 @@
 import pygame
 class enemy:
-    def __init__(self,picture,speed,damage,health,type,armour,index,hitbox,death_Animation,death_Sound,attack_Sound,movement_Sound,attack_Animation,movement_Animation,spawn_X,spawn_Y,screen):
+    def __init__(self,picture,speed,damage,health,type,armour,index,hitbox,cooldown,death_Animation,death_Sound,attack_Sound,movement_Sound,attack_Animation,movement_Animation,spawn_X,spawn_Y,screen):
         self.picture=picture
         self.speed=speed
         self.damage=damage
@@ -15,7 +15,7 @@ class enemy:
         self.attack_Animation=attack_Animation
         self.movement_Animation=movement_Animation
         self.screen=screen
-        self.cooldown=0
+        self.cooldown=cooldown
         self.spawn_X=spawn_X
         self.spawn_Y=spawn_Y
         self.current_X=spawn_X
@@ -93,7 +93,7 @@ class enemy:
             enemy_Rect[self.spawn_index]=self.Rect
             pygame.draw.rect(self.screen,(255,0,0),(self.current_X,self.current_Y,10,10))
             self.screen_Rect=self.Rect
-            if self.type=="runner":
+            if self.type=="runner" or self.type=="archer":
                 self.chase()
             if self.type!="runner":
                 self.back_Forth(obstacle_Rect)
@@ -124,14 +124,56 @@ class enemy:
             self.current_Y+=self.fall_speed
             self.current_Y=max(0,min(self.current_Y,490))
     def chase(self):
-        if self.player_Position[1]>=self.Rect[1]-100:
+        if self.player_Position[1]>=self.Rect[1]-100 and self.type=="runner":
             if self.player_Position.left<=self.Rect.right+125 and self.player_Position.right>=self.Rect.left-125:
                 self.see=True
-        if self.see==True:
+        
+        if self.see==True and self.type=="runner":
             if self.Rect[0]-self.player_Position[0]<0:
                 self.current_X+=self.speed
             elif self.Rect[0]-self.player_Position[0]>0:
                 self.current_X-=self.speed
+        """
+        elif self.see==True and self.type=="archer" and self.moved==False:
+            if self.Rect[0]-self.player_Position[0]<0:
+                if self.Rect[0]-self.player_Position<-150:
+                    while self.current_X!=-150:
+                        self.current_X-=self.speed
+                elif self.Rect[0]-self.player_Position>-150:
+                    while self.current_X!=-150:
+                        self.current_X+=self.speed
+                else:
+                    self.moved=True
+            elif self.Rect[0]-self.player_Position[0]>0:
+                if self.Rect[0]-self.player_Position<150:
+                    while self.current_X!=150:
+                        self.current_X-=self.speed
+                elif self.Rect[0]-self.player_Position>150:
+                    while self.current_X!=150:
+                        self.current_X+=self.speed
+                else:
+                    self.moved=True
+            elif self.Rect[0]-self.player_Position[0]==150:
+                pass
+            """
+    def archer(self):
+        if self.player_Position[1]>=self.Rect[1]-200 and self.type=="archer" and self.see==False:
+            if self.player_Position.left<=self.Rect.right+250 and self.player_Position.right>=self.Rect.left-250:
+                self.see=True
+        elif self.see==True:
+            self.archer_Attack()
+    def archer_Attack(self):
+        if self.cooldown<=0 and self.hit==True:
+            self.target=self.player_Position
+            pygame.draw.rect(self.screen,(255,255,255),(self.current_X,self.current_Y,30,10))
+            self.arrow=pygame.Rect((self.current_X,self.current_Y,30,10))
+            self.cooldown=300
+        else:
+            self.cooldown-=1
+            self.arrow_update()
+        
+    def arrow_update(self):
+        pass
     def enemy_Attack(self):
         if self.cooldown<=0 and self.death!=True:
             #print(self.Rect)
